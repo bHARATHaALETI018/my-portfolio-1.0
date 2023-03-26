@@ -4,14 +4,14 @@ import { SocialIcon } from 'react-social-icons';
 import { motion } from "framer-motion"
 import { HashLink } from 'react-router-hash-link';
 import { BrowserRouter } from "react-router-dom";
-import createClient from "../client.js";
+import sanityClient from "../client.js";
 
 const Header = () => {
     const [socials, setSocials] = useState([]);
 
     async function fetchSocials() {
       try {
-        const data = await createClient.fetch(`*[_type == 'social']`);
+        const data = await sanityClient.fetch(`*[_type == 'social']`);
         setSocials(data);
       } catch (error) {
         console.error(error);

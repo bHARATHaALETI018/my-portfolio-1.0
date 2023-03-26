@@ -1,8 +1,8 @@
 import {createClient} from "@sanity/client";
 
 export const sanityClient = {
-  projectId: "o0r3m4wx", // find this at manage.sanity.io or in your sanity.json
-  dataset: "production", // this is from those question during 'sanity init'
+  projectId: "o0r3m4wx",  
+  dataset: "production",  
   useCdn: true,
   apiVersion : "2023-03-26"
 };
@@ -10,9 +10,9 @@ export const sanityClient = {
 export default createClient(sanityClient);
 
 
+// import createImageUrlBuilder from "@sanity/image-url";
 
 // import {createClient} from "@sanity/client";
-// import createImageUrlBuilder from "@sanity/image-url";
 
 // export const config = {
 //   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
