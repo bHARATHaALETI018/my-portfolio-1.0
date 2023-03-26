@@ -1,16 +1,36 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import { BrowserRouter } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
 import BackGoundCircles from './BackGoundCircles';
-import profile from '../images/profile.jpg'
+import sanityClient from '../client.js'
+import imageUrlBuilder from "@sanity/image-url";
+
+const builder = imageUrlBuilder(sanityClient);
+function urlFor(source) {
+  return builder.image(source);
+}
 
 const Hero = () => {
+    const [pageinfo, setPageinfo] = useState(null);
+    async function fetchPageInfo(){
+        try{
+            const data = await sanityClient.fetch(`*[_type=='pageInfo'][0]`);
+            setPageinfo(data);
+        }catch(error){
+            console.error(error);
+        }
+    }
+    useEffect(()=>{
+        fetchPageInfo();
+    }, []);
+
     const [text] = useTypewriter({
         words: [
-            "Hi names Bharath Aaleti",
-            "Guy-who-love-adventure.jsx",
-            "<SANATANA DHARMA/>"
+            "Hi, I'm Bharath Aaleti",
+            "But you can call me Bharath😄",
+            `${pageinfo?.typewriter3}`,
+            `${pageinfo?.typewriter4}`
         ],
         loop: true,
         delaySpeed: 1500,
@@ -18,12 +38,14 @@ const Hero = () => {
   return (
     <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden mt-20'>
         <BackGoundCircles />
-        <img 
-            className="relative rounded-full h-32 w-32 mx-auto object-cover"
-            src={profile} alt="profileImage" 
-        />
+        {
+            pageinfo && (<img 
+                className="relative rounded-full h-32 w-32 mx-auto object-cover"
+                src={urlFor(pageinfo?.heroImage).url()} alt="profileImage" 
+            />
+        )}
         <div className='z-20'>
-            <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>Software Developer</h2>
+            { pageinfo && (<h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>{pageinfo?.role}</h2> )}
             <h1 className='text-5xl lg:text-6xl font-semibold px-10'>
                 <span>{text}</span>
                 <Cursor cursorStyle='$' cursorColor='#F7AB0A'/>

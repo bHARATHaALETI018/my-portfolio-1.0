@@ -7,34 +7,37 @@ export default {
             name : 'name',
             title : 'Name',
             type : 'string',
-        },
-        {
+        },{
+            name : 'typewriter3',
+            title : 'Typewriter3',
+            type : 'string',
+        },{
+            name : 'typewriter4',
+            title : 'Typewriter4',
+            type : 'string',
+        },{
             name : 'role',
             title : 'Role',
             type : 'string',
-        },
-        {
+        },{
             name : 'heroImage',
             title : 'Image',
             type : 'image',
             options:{
                 hotspot : true
             }, 
-        }, 
-        {
+        },{
             name : 'backgroundInformation',
             title : 'BackgroundInformation',
             type : 'string',
-        },
-        {
+        },{
             name : 'profilePic',
             title : 'ProfilePic',
             type : 'image',
             options:{
                 hotspot: true,
             },
-        },
-        {
+        },{
             name : 'phoneNumber',
             title : 'PhoneNumber',
             type : 'string',
@@ -42,13 +45,11 @@ export default {
             name : 'email',
             title : 'Email',
             type : 'string',
-        },
-        {
+        },{
             name : 'address',
             title : 'Address',
             type : 'string',
-        },
-        {
+        },{
             name : 'socials',
             title : 'Socials',
             type : 'array',
