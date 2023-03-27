@@ -52,10 +52,10 @@ const Hero = () => {
             </h1>
             <BrowserRouter>
                 <div className='pt-5'>
-                    <HashLink to='#about'><button className='px-6 py-2 cursor-pointer border-[#f2d47a] rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all  hover:text-[#F7AB0A]/40 hover:border-white'>About</button></HashLink>
-                    <HashLink to='#skills'><button className='px-6 py-2 cursor-pointer border-[#f2d47a] rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all  hover:text-[#F7AB0A]/40 hover:border-white '>Skills</button></HashLink>
-                    <HashLink to='#projects'><button className='px-6 py-2 cursor-pointer border-[#f2d47a] rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all  hover:text-[#F7AB0A]/40 hover:border-white'>Projects</button></HashLink>
-                    <HashLink to='#contact' ><button className='px-6 py-2 cursor-pointer border-[#f2d47a] rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all  hover:text-[#F7AB0A]/40 hover:border-white'>contact</button> </HashLink>
+                    <HashLink to='#about'><button className='px-6 py-2 cursor-pointer border-[#f2d47a] rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all  hover:text-[#F7AB0A]/40 hover:border'>About</button></HashLink>
+                    <HashLink to='#skills'><button className='px-6 py-2 cursor-pointer border-[#f2d47a] rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all  hover:text-[#F7AB0A]/40 hover:border '>Skills</button></HashLink>
+                    <HashLink to='#projects'><button className='px-6 py-2 cursor-pointer border-[#f2d47a] rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all  hover:text-[#F7AB0A]/40 hover:border'>Projects</button></HashLink>
+                    <HashLink to='#contact' ><button className='px-6 py-2 cursor-pointer border-[#f2d47a] rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all  hover:text-[#F7AB0A]/40 hover:border'>contact</button> </HashLink>
                 </div>
             </BrowserRouter>
         </div>
