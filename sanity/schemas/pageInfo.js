@@ -62,5 +62,10 @@ export default {
                 },
             ],
         },
+        {
+            name : 'resume',
+            title : 'Resume',
+            type : 'url',
+        },
     ]
 }

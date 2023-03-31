@@ -8,6 +8,7 @@ import sanityClient from "../client.js";
 
 const Header = () => {
     const [socials, setSocials] = useState([]);
+    const [resume, setResume] = useState(null);
 
     async function fetchSocials() {
       try {
@@ -17,8 +18,17 @@ const Header = () => {
         console.error(error);
       }
     }
+    async function fetchResume(){
+        try{
+            const data = await sanityClient.fetch(`*[_type=='pageInfo'][0].resume`);
+            setResume(data);
+        }catch(error){
+            console.error(error);
+        }
+    }
     useEffect(() => {
       fetchSocials();
+      fetchResume();
     }, []);
   return (
     <header className='sticky top-0 p-3 flex items-start justify-between max-w-7xl mx-auto z-50 xl:items-center'>
@@ -45,6 +55,7 @@ const Header = () => {
                     target={'_blank'} bgColor='transparent'/>        
                 ))
             }
+            
         </motion.div>
         <motion.div
         initial={{
@@ -60,6 +71,9 @@ const Header = () => {
         transition={{
             duration:1.5,
         }} className='flex flex-row items-center text-gray-500 cursor-pointer'>
+            { 
+              resume &&  <a target={'_blank'} href={resume} rel="noopener noreferrer" className='uppercase text-[1rem] tracking-[3px] text-gray-500'>Resume</a>
+            }
             <BrowserRouter>
                 <HashLink to='#contact'>
                     <SocialIcon network='email' fgColor='gray' bgColor='transparent' className='cursor-pointer'/>
