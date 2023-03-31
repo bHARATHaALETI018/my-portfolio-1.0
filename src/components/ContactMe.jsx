@@ -29,7 +29,7 @@ const ContactMe = () => {
             </div>
 
             <form onSubmit={handleSubmit(onsubmit)}  className='flex flex-col space-y-2 w-fit mx-auto'>
-                <div className="flex space-x-2">
+                <div className="flex space-y-2 sm:space-x-2 flex-col sm:flex-row">
                     <input {...register("name")} type="text" placeholder='Name' className=' contactBoxStyle'/>
                     <input {...register("email")} type="email" placeholder='Email' className=' contactBoxStyle'/>
                 </div>
