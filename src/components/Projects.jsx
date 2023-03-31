@@ -46,7 +46,7 @@ const Projects = () => {
                   src={urlFor(project?.image).url()} className="w-[20rem] h-[10rem] md:w-[25rem] md:h-[15rem] xl:w-[500px] xl:h-[300px] rounded-xl  "/>
                 <div className='space-y-3 px-0 md:px-10 max-w-6xl'>
                   <h4 className='text-2xl sm:text-2xl font-semibold text-center'><span className='underline decoration-[#f7ab0a]/50'>Project {i+1} of {projects.length}</span> :    
-                    <a href={project?.linkToBuild} target={"_blank"} className="transition-all hover:border hover:text-[#f7ab0a] p-1 rounded-xl mx-6">  {project?.title} </a>
+                    <a href={project?.linkToBuild} target={"_blank"} rel="noopener noreferrer" className="transition-all hover:border hover:text-[#f7ab0a] p-1 rounded-xl mx-6">  {project?.title} </a>
                   </h4>
                   <div className='flex flex-row justify-center items-center gap-x-6  '>
                   {project && project?.technologies.map((tech)=>(
