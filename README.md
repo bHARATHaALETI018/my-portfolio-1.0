@@ -1,5 +1,5 @@
 ### Welcome to my portfolio website! Here you'll find a collection of my latest and greatest work, from design projects to coding experiments.
-### You can find it online from ## [here](bharathaaleti018.netlify.app)
+### You can find it online from ## [here](https://bharathaaleti018.netlify.app)
 
 
 In the project directory, you can run:
