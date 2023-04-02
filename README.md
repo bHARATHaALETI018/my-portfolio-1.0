@@ -1,8 +1,6 @@
-# Getting Started with Create React App
+###Welcome to my portfolio website! Here you'll find a collection of my latest and greatest work, from design projects to coding experiments.
+###You can find it online from ##[here](bharathaaleti018.netlify.app)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
 
 In the project directory, you can run:
 
