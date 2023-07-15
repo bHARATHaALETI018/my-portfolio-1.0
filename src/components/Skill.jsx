@@ -21,7 +21,7 @@ const ExampleSkill = (props) => {
         />}
         <div className='absolute opacity-0 w-20 h-20 rounded-full hover:bg-white md:w-24 md:h-24  opacity-1 group-hover:opacity-60 translate duration-300 ease-in-out'>
             <div className='flex justify-center items-center h-full'>
-                {props.skil && <p className='text-3xl text-black font-bold opacity-100'>{props.skil?.progress}%</p>}
+                {props.skil && <p className='text-3xl text-black font-bold opacity-100'>{props.skil?.progress}*</p>}
             </div>
         </div>
     </div>
